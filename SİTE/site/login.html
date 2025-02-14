@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <!-- Giriş Formu -->
+    <form class="form" id="loginForm">
+        <p class="form-title">Hesabınıza Giriş Yapın</p>
+        <div class="input-container">
+            <input type="email" id="email" placeholder="E-posta adresinizi girin" required>
+        </div>
+        <div class="input-container">
+            <input type="password" id="password" placeholder="Şifrenizi girin" required>
+        </div>
+        <button type="submit" class="submit">Giriş Yap</button>
+
+        <p class="signup-link">
+            Hesabınız yok mu?
+            <a href="register.html">Kayıt Ol</a>
+        </p>
+    </form>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Formun sayfayı yenilemesini engeller
+
+            // Kullanıcı bilgileri
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Örnek giriş bilgileri (Gerçek projelerde backend kullanılır)
+            if (email === "test@example.com" && password === "12345") {
+                alert("Giriş başarılı! Ana sayfaya yönlendiriliyorsunuz.");
+                window.location.href = "index.html"; // Başarıyla giriş yaptıysa yönlendirme yap
+            } else {
+                alert("Yanlış e-posta veya şifre!");
+            }
+        });
+    </script>
+
+</body>
+</html>

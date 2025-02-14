@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenebilen ve Sesli Yanıt Seçenekli Bot</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleChat() {
+            const chatBox = document.getElementById("chat-box");
+            chatBox.style.display = chatBox.style.display === "none" ? "block" : "none";
+        }
+    </script>
+    <style>
+        .login-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 90px;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 10px;
+        }
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Giriş Yap Butonu -->
+    <a href="login.html" class="login-button">Giriş Yap</a>
+
+    <!-- Google Arama Kutusu -->
+    <div class="search-box">
+        <form action="https://www.google.com/search" method="GET">
+            <input type="text" name="q" placeholder="Ne Arıyorsunuz?">
+            <button type="submit">Ara</button>
+        </form>
+    </div>
+
+    <!-- Sohbet Botu -->
+    <button onclick="toggleChat()">Sohbet Botu</button>
+    <div id="chat-box" style="display: none; background: #1f1f1f; padding: 10px; border-radius: 5px; width: 300px; position: absolute; top: 50px; right: 50px; color: white;">
+        <div id="chat-area" style="height: 150px; overflow-y: auto;"></div>
+        <input type="text" id="user-input" placeholder="Mesajınızı yazın..." style="width: 80%;">
+        <button onclick="sendMessage()">Gönder</button>
+        <button id="voice-toggle" onclick="toggleVoice()">🔇 Sesli Yanıt Aç</button>
+    </div>
+    
+
+
+
+</body>
+</html>

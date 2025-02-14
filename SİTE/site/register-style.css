@@ -1,0 +1,121 @@
+/* 🌌 Genel Stil - Koyu Tema */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e1e2e, #252540); /* Koyu Mor & Lacivert */
+    color: white;
+}
+
+/* 📌 Kayıt Formu Kutusu */
+.register-container {
+    background: rgba(255, 255, 255, 0.1); /* Saydam beyaz kutu */
+    backdrop-filter: blur(10px); /* Arka plan bulanıklık efekti */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* 📝 Form Başlığı */
+.register-form h2 {
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* 🖊️ Giriş Alanları */
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    padding-left: 40px; /* İkon için boşluk */
+    font-size: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1); /* Saydam input alanı */
+    color: white;
+    transition: 0.3s;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-group input:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 8px rgba(79, 172, 254, 0.5);
+}
+
+/* 🎭 İkon Stili */
+.input-group .icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* 🚀 Kayıt Ol Butonu */
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+/* 🔗 Giriş Yap Linki */
+.login-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: white;
+}
+
+.login-link a {
+    color: #4facfe;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* 🔥 Animasyon */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

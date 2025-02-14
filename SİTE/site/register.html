@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol</title>
+    <link rel="stylesheet" href="register-style.css"> <!-- Güncellenmiş stil dosyası -->
+</head>
+<body>
+
+    <div class="register-container">
+        <form class="register-form" id="registerForm">
+            <h2>Hesap Oluştur</h2>
+
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Kullanıcı Adı" required>
+                <span class="icon">👤</span>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" placeholder="E-posta adresinizi girin" required>
+                <span class="icon">📧</span>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Şifrenizi girin" required>
+                <span class="icon">🔒</span>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="confirm-password" placeholder="Şifrenizi tekrar girin" required>
+                <span class="icon">🔑</span>
+            </div>
+
+            <button type="submit" class="register-btn">Kayıt Ol</button>
+
+            <p class="login-link">
+                Zaten bir hesabınız var mı? <a href="login.html">Giriş Yap</a>
+            </p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Sayfanın yenilenmesini engelle
+
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+
+            if (password !== confirmPassword) {
+                alert("⚠️ Şifreler uyuşmuyor!");
+                return;
+            }
+
+            alert("✅ Kayıt başarılı! Şimdi giriş yapabilirsiniz.");
+            window.location.href = "login.html"; // Giriş sayfasına yönlendirme
+        });
+    </script>
+
+</body>
+</html>
